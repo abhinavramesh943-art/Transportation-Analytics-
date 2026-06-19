@@ -69,7 +69,7 @@ max_date=df['Timestamp'].max().date()
 
 selected_date= st.date_input('Select Date', value= min_date, min_value = min_date , max_value = max_date)
 
-filtered = df[df['Timestamp'].dt.date = selected_date]
+filtered = df[df['Timestamp'].dt.date == selected_date]
 
 selected_hour = st.slider("Hour",0,23,(0,23))
 
