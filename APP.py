@@ -73,7 +73,7 @@ filtered = df[df['Timestamp'].dt.date = selected_date]
 
 selected_hour = st.slider("Hour",0,23,(0,23))
 
-filtered = filtered[(filtered['Hour']>= selected_hour[0] & (filtered['Hour']<= selected_hour[1])]
+filtered = filtered[(filtered['Hour']>= selected_hour[0]) & (filtered['Hour']<= selected_hour[1])]
 
 #4) Peak vs off peak comparison 
 
