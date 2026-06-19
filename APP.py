@@ -28,7 +28,15 @@ df['NetMovement'] = (df['Sales Count'] - df['Redemption Count'])
 
 
                                         
-import streamlit as st                                                                                                                                                    
+import streamlit as st
+#)Dashboard Module
+#1)Real time KPI
+
+col1,col2,col3 = st.columns(3)
+
+with col1:
+  st.metric("Tickets Sold",                                                                                                                                              int(df['Sales Count'].sum()) 
+                                                                                                                                                
                                                         
                                            
                                                         
