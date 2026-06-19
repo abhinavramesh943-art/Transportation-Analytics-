@@ -62,7 +62,8 @@ hourly_redemption = df.groupby('Hour')['Redemption Count' ].mean()
 
 import matplotlib.pyplot as plt
 hourly_sales.plot(figsize=(10,5))              
-plt.title("Average Ticket Sales by Hour")                    plt.show()
+plt.title("Average Ticket Sales by Hour")   
+                 plt.show()
 
 
 df.groupby('Weekend')['Sales Count'].mean()
