@@ -61,12 +61,8 @@ hourly_redemption = df.groupby('Hour')['Redemption Count' ].mean()
 
 
 import matplotlib.pyplot as plt
-
- hourly_sales.plot(figsize=(10,5))
-                
- plt.title("Average Ticket Sales by Hour")
-                    
-  plt.show()
+hourly_sales.plot(figsize=(10,5))              
+plt.title("Average Ticket Sales by Hour")                    plt.show()
 
 
 df.groupby('Weekend')['Sales Count'].mean()
@@ -77,17 +73,16 @@ monthly.plot()
 plt.show()
 
 
-                            df['Rolling1Hour'] = (df['Sales Count'].rolling(4) .mean())
+                            df['Rolling1Hour'] = df['Sales Count'].rolling(4) .mean()
                                         
 
 
-                                        df['Rolling4Hour'] = 
-                                         (df['Sales Count'].rolling(16).mean())
+                                                                         df['Rolling4Hour'] = df['Sales Count'].rolling(16).mean())
                                                     
                                                     
 
 
-                                                    peak = df.nlargest(20,'Sales Count')                                                   
+                                                    peak = df.nlargest(20,  'Sales Count')                                                   
                                                         
                                            
                                                         import streamlit as st
