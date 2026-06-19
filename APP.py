@@ -56,7 +56,11 @@ peak_hour= df.groupby('Hour')['Sales Count'].mean().idxmax()
 
 st.metric("Peak Hour", f"{peak_hour}:00")
 
-#2)
+#2)Interactive time series plot 
+
+hourly=df.groupby('Hour')['Sales Count'].mean()
+
+st.line_chart(hourly)
 
                                                                                                                                  
                                                                                                                                                 
