@@ -57,8 +57,7 @@ hourly_sales = df.groupby('Hour')[
         ].mean()
 
 
-
- hourly_redemption = df.groupby('Hour')[
+hourly_redemption = df.groupby('Hour')[
             'Redemption Count'
             ].mean()
 
@@ -85,16 +84,12 @@ df.groupby('Weekend')[
 monthly = df.groupby('Month')[
                 'Sales Count'
                             ].mean()
+monthly.plot()
+plt.show()
 
-                            monthly.plot()
-                            plt.show()
 
-
-                            df['Rolling1Hour'] = (
-                                df['Sales Count']
-                                    .rolling(4)
-                                        .mean()
-                                        )
+                            df['Rolling1Hour'] = (df['Sales Count'].rolling(4) .mean())
+                                        
 
 
                                         df['Rolling4Hour'] = (
@@ -104,10 +99,9 @@ monthly = df.groupby('Month')[
                                                     )
 
 
-                                                    peak = df.nlargest(
-                                                        20,
-                                                            'Sales Count'
-                                                            )
+                                                    peak = df.nlargest(20,'Sales Count')                                                   
+                                                          
+                                           
 
 
 
