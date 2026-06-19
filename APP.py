@@ -69,13 +69,6 @@ plt.show()
 df.groupby('Weekend')['Sales Count'].mean()
 
 
-import streamlit as st
-
-
-
-
-
-
 monthly = df.groupby('Month')['Sales Count'].mean()
 monthly.plot()
 plt.show()
@@ -86,7 +79,8 @@ df['Rolling1Hour'] = df['Sales Count'].rolling(4).mean()
 df['Rolling4Hour'] = df['Sales Count'].rolling(16).mean()
 
 peak = df.nlargest(20, 'Sales Count') 
-                                                                                                                                                                                            
+                                        
+import streamlit as st                                                                                                                                                    
                                                         
                                            
                                                         
