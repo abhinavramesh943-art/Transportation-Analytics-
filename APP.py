@@ -35,7 +35,7 @@ import streamlit as st
 col1,col2,col3 = st.columns(3)
 
 with col1:
-  st.metric("Tickets Sold", int(df['Sales Count].sum())                                                                                                                                         
+  st.metric("Tickets Sold", int(df['Sales Count'].sum())                                                                                                                                         
                                                                                                                                                 
                                                         
                                            
