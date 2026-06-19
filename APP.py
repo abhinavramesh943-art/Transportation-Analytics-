@@ -88,13 +88,9 @@ plt.show()
 
 
                                                     peak = df.nlargest(20,'Sales Count')                                                   
-                                                          
+                                                        
                                            
-
-
-
-
-                                                            import streamlit as st
+                                                        import streamlit as st
                                                             #Dashboard Modules
                                                             #1) Real time KPI cards
                                                             col1, col2, col3 = st.columns(3)
