@@ -46,45 +46,44 @@ df['Weekend'] = df['DayOfWeek'].isin(
 
 
 
-    df['NetMovement'] = (df['Sales Count'] - df['Redemption Count'])
+df['NetMovement'] = (df['Sales Count'] - df['Redemption Count'])
 
 
 
 
 
-    hourly_sales = df.groupby('Hour')[
+hourly_sales = df.groupby('Hour')[
         'Sales Count'
         ].mean()
 
 
 
-        hourly_redemption = df.groupby('Hour')[
+ hourly_redemption = df.groupby('Hour')[
             'Redemption Count'
             ].mean()
 
 
 
 
-            import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
-            hourly_sales.plot(
+ hourly_sales.plot(
                 figsize=(10,5)
                 )
-
-                plt.title(
-                    "Average Ticket Sales by Hour"
+ plt.title(
+        "Average Ticket Sales by Hour"
                     )
 
                     plt.show()
 
 
-                    df.groupby('Weekend')[
-                        'Sales Count'
+df.groupby('Weekend')[
+           'Sales Count'
                         ].mean()
 
 
-                        monthly = df.groupby('Month')[
-                            'Sales Count'
+monthly = df.groupby('Month')[
+                'Sales Count'
                             ].mean()
 
                             monthly.plot()
