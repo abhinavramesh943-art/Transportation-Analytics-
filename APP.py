@@ -62,6 +62,21 @@ hourly=df.groupby('Hour')['Sales Count'].mean()
 
 st.line_chart(hourly)
 
+
+#3) Data and Time filters
+min_date=df['Timestamp'].min().date()
+max_date=df['Timestamp'].max().date()
+
+selected_date= st.date_input('Select Date',value=min_date,min value = min_date, max_value = max_date)
+
+filtered = df[df['Timestamp'].dt.date = selected_date]
+
+selected_hour = st.slider("Hour,0,23,(0,23))
+
+filtered = filtered[(filtered['Hour']>= selected_hour[0] & (filtered['Hour']<= selected_hour[1])]
+
+#4) Peak vs off peak comparison 
+
                                                                                                                                  
                                                                                                                                                 
                                                         
