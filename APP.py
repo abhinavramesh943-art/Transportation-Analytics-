@@ -52,37 +52,27 @@ df['NetMovement'] = (df['Sales Count'] - df['Redemption Count'])
 
 
 
-hourly_sales = df.groupby('Hour')[
-        'Sales Count'
-        ].mean()
+hourly_sales = df.groupby('Hour')['Sales Count' ].mean()
 
 
-hourly_redemption = df.groupby('Hour')[
-            'Redemption Count'
-            ].mean()
+hourly_redemption = df.groupby('Hour')['Redemption Count' ].mean()
 
 
 
 
 import matplotlib.pyplot as plt
 
- hourly_sales.plot(
-                figsize=(10,5)
-                )
- plt.title(
-        "Average Ticket Sales by Hour"
-                    )
+ hourly_sales.plot(figsize=(10,5))
+                
+ plt.title("Average Ticket Sales by Hour")
+                    
   plt.show()
 
 
-df.groupby('Weekend')[
-           'Sales Count'
-                        ].mean()
+df.groupby('Weekend')['Sales Count'].mean()
 
 
-monthly = df.groupby('Month')[
-                'Sales Count'
-                            ].mean()
+monthly = df.groupby('Month')['Sales Count'].mean()
 monthly.plot()
 plt.show()
 
@@ -91,11 +81,10 @@ plt.show()
                                         
 
 
-                                        df['Rolling4Hour'] = (
-                                            df['Sales Count']
-                                                .rolling(16)
-                                                    .mean()
-                                                    )
+                                        df['Rolling4Hour'] = 
+                                         (df['Sales Count'].rolling(16).mean())
+                                                    
+                                                    
 
 
                                                     peak = df.nlargest(20,'Sales Count')                                                   
