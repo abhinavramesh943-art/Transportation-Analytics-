@@ -71,7 +71,7 @@ selected_date= st.date_input('Select Date',value=min_date,min value = min_date, 
 
 filtered = df[df['Timestamp'].dt.date = selected_date]
 
-selected_hour = st.slider("Hour,0,23,(0,23))
+selected_hour = st.slider("Hour",0,23,(0,23))
 
 filtered = filtered[(filtered['Hour']>= selected_hour[0] & (filtered['Hour']<= selected_hour[1])]
 
