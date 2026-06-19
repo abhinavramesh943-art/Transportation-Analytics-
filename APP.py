@@ -44,7 +44,21 @@ import streamlit as st
 col1,col2,col3 = st.columns(3)
 
 with col1:
-  st.metric("Tickets Sold", int(df['Sales Count'].sum()) )                                                                                                                                        
+  st.metric("Tickets Sold", int(df['Sales Count'].sum()) )  
+
+with col2:
+   st.metric("Tickets Redeemed", int(df['Redemption Count'].sum()) )
+
+with col3:
+  st.metric("Net Movement", int(df['NetMovement'].sum()) )
+
+peak_hour= df.groupby('Hour')['Sales Count'].mean().idxmax()
+
+st.metric("Peak Hour", f"{peak_hour}:00")
+
+#2)
+
+                                                                                                                                 
                                                                                                                                                 
                                                         
                                            
