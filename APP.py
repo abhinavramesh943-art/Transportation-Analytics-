@@ -77,7 +77,7 @@ plt.show()
                                         
 
 
-                                                                         df['Rolling4Hour'] = df['Sales Count'].rolling(16).mean())
+                                                                         df['Rolling4Hour'] = df['Sales Count'].rolling(16).mean()
                                                     
                                                     
 
