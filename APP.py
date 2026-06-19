@@ -4,6 +4,15 @@ df=pd.read_csv("Toronto Island Ferry Tickets.csv")
 
 df['Timestamp'] = pd.to_datetime(df['Timestamp'])
 
+df=df.sort_values('Timestamp')
+print(df.head())
+
+
+df.isnull().sum()
+df=df.dropna()
+
+df=df.drop_duplicates()
+
 
 df['Hour'] = df['Timestamp'].dt.hour
 
