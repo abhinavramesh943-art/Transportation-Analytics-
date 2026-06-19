@@ -72,8 +72,7 @@ import matplotlib.pyplot as plt
  plt.title(
         "Average Ticket Sales by Hour"
                     )
-
-                    plt.show()
+  plt.show()
 
 
 df.groupby('Weekend')[
