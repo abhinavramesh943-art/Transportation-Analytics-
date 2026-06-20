@@ -96,19 +96,26 @@ st.write( f" Off-Peak average sales: {offpeak_avg:.0f}")
 #User Roles
 
 role=st.sidebar.selectbox("User Roles",['Operation Team','Policy Planner','Management'])
-print(role)
+
 
 #1) Operations Team Roles
 if role=='Operation Team ':
   st.header("Operation Dashboard")
+  st.metric("Tickets Sold",int (df['Sales Count'].sum())
+  st.metric("Net Movement", int(df['NetMovement'].sum())
+   st.line_chart(df.groupby('Hour')['Sales Count'].mean())
 
 #2) Policy Planner Views
 if role == 'Policy Planner':
    st.header("Policy Analytics")
+   st.bar_chart(df.groupby('Month')['Sales Count'].mean())
+
 
 #3) Management Views
 if role == 'Management':
    st.header("Executive Summary")
+   st.metric("Total Sales",int(df['Sales Count'].sum()))
+   st.write("Peak demands during afternoon hours.")
 
 
 
