@@ -77,6 +77,38 @@ filtered = filtered[(filtered['Hour']>= selected_hour[0]) & (filtered['Hour']<= 
 
 #4) Peak vs off peak comparison 
 #Create Categories 
+df['Peak']= df['Hour'].between(10,18)
+
+#Analysis 
+comparison = df.groupby('Peak')['Sales Count'].mean()
+
+st.bar_chart(comparison)
+
+#Display 
+
+peak_avg=df[df['Peak']]['Sales Count'].mean()
+offpeak_avg=df[~df['Peak']]['Sales Count'].mean()
+
+st.write( f" Peak average sales: {peak_avg:.0f}")
+
+st.write( f" Off-Peak average sales: {offpeak_avg:.0f}")
+
+#User Roles
+
+role=st.sidebar.selectbox("User Roles",['Operation Team','Policy Planner','Management'])
+
+#1) Operations Team Roles
+if role=='Operation Team ':
+  st.header("Operation Dashboard")
+
+#2) Policy Planner Views
+if role == 'Policy Planner':
+   st.header("Policy Analytics")
+
+#3) Management Views
+if role == 'Management':
+   st.header("Executive Summary")
+
 
 
                                                                                                                                  
