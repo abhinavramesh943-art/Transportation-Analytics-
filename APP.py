@@ -102,7 +102,7 @@ role=st.sidebar.selectbox("User Roles",['Operation Team','Policy Planner','Manag
 if role=='Operation Team ':
   st.header("Operation Dashboard")
   st.metric("Tickets Sold",int (df['Sales Count'].sum()))
-  st.metric("Net Movement", int(df['NetMovement'].sum())
+  st.metric("Net Movement", int(df['NetMovement'].sum()))
    st.line_chart(df.groupby('Hour')['Sales Count'].mean())
 
 #2) Policy Planner Views
