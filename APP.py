@@ -96,6 +96,7 @@ st.write( f" Off-Peak average sales: {offpeak_avg:.0f}")
 #User Roles
 
 role=st.sidebar.selectbox("User Roles",['Operation Team','Policy Planner','Management'])
+print(role)
 
 #1) Operations Team Roles
 if role=='Operation Team ':
