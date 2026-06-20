@@ -101,7 +101,7 @@ role=st.sidebar.selectbox("User Roles",['Operation Team','Policy Planner','Manag
 #1) Operations Team Roles
 if role=='Operation Team ':
   st.header("Operation Dashboard")
-  st.metric("Tickets Sold",int (df['Sales Count'].sum())
+  st.metric("Tickets Sold",int (df['Sales Count'].sum()))
   st.metric("Net Movement", int(df['NetMovement'].sum())
    st.line_chart(df.groupby('Hour')['Sales Count'].mean())
 
