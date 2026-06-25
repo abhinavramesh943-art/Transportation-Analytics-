@@ -38,6 +38,13 @@ df['NetMovement'] = (df['Sales Count'] - df['Redemption Count'])
 
                                         
 import streamlit as st
+
+from streamlit_autorefresh import st_autorefresh
+st_autorefresh(interval=60000,key='refresh')
+df=pd.read_csv("Toronto Island Ferry Tickets.csv")
+st.caption("Dashboard refreshes every 60 seconds")
+
+
 #)Dashboard Module
 #1)Real time KPI
 
