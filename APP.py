@@ -41,7 +41,7 @@ import streamlit as st
 #)Dashboard Module
 #1)Real time KPI
 
-col1,col2,col3,co14,col5 = st.columns(5)
+col1,col2,col3,col4,col5 = st.columns(5)
 
 with col1:
   st.metric("Tickets Sold", int(df['Sales Count'].sum()) )  
