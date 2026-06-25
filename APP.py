@@ -62,9 +62,18 @@ with col4:
   st.metric("Peak Demand Window",f"{peak_hour}:00")
   st.write(f"Average sales during peak hour: {peak_sales:.0f}")
 
-  peak_window = (df.groupby('Hour'['Sales Count'].mean().sort_values(ascending=False).head(5))
+  peak_window = (df.groupby('Hour')['Sales Count'].mean().sort_values(ascending=False).head(5))
   st.subheader("Top 5 Peak Demand Windows")
   st.dataframe(peak_window)
+
+with col5:
+  df['SeasonType'] = df['Month'].apply(lambda x: 'Peak' 
+if x in [6,7,8]
+else 'Off-Season')
+  peak_avg = (df[df['SeasonType']=='Peak']['Sales Count'].mean())
+  off_avg = (df[df['SeasonType']=='Off-Season']['Sales Count'].mean())
+  Utilization_index = (off_avg/peak_avg)*100
+  st.metric("Off-Season Utilization Index",f"{Utilization_index:.1f}%")
 
 #2)Interactive time series plot 
 
