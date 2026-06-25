@@ -41,7 +41,7 @@ import streamlit as st
 #)Dashboard Module
 #1)Real time KPI
 
-col1,col2,col3 = st.columns(3)
+col1,col2,col3,co14,col5 = st.columns(5)
 
 with col1:
   st.metric("Tickets Sold", int(df['Sales Count'].sum()) )  
@@ -55,6 +55,16 @@ with col3:
 peak_hour= df.groupby('Hour')['Sales Count'].mean().idxmax()
 
 st.metric("Peak Hour", f"{peak_hour}:00")
+
+with col4:
+  peak_hour= df.groupby('Hour')['Sales Count'].mean().idxmax()
+  peak_sales = df.groupby('Hour')['Sales Count'].mean().max()
+  st.metric("Peak Demand Window",f"{peak_hour}:00")
+  st.write(f"Average sales during peak hour: {peak_sales:.0f}")
+
+  peak_window = (df.groupby('Hour'['Sales Count'].mean().sort_values(ascending=False).head(5))
+  st.subheader("Top 5 Peak Demand Windows")
+  st.dataframe(peak_window)
 
 #2)Interactive time series plot 
 
