@@ -298,7 +298,7 @@ Based on the analysis, the following recommendations are proposed:
 6. Continue collecting near real-time ticket data for ongoing monitoring.
 
 
-11. Executive Summary:
+11.Executive Summary:
 
 This project analyzed historical ferry ticket sales and redemption data for Toronto Island Park to identify passenger demand patterns, peak travel periods, and operational trends. The analysis supports data-driven decision-making for ferry scheduling, staffing, and congestion management.
 
