@@ -359,3 +359,8 @@ Implementation of this analytics system can provide:
 This project successfully demonstrates how transportation analytics can improve ferry operations through data-driven insights. Historical ticket sales and redemption records were transformed into meaningful operational metrics using Python and visualized through an interactive Streamlit dashboard.
 
 The proposed analytics system enables operations teams, policy planners, and management stakeholders to monitor passenger demand, identify peak travel periods, optimize ferry scheduling, and improve overall service efficiency. The project highlights the practical application of data analytics in supporting smarter transportation planning for Toronto Island Park.
+
+
+15. Reference:
+
+15.1 Toronto Island Ferry Tickets dataset.
